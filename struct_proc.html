@@ -65,6 +65,51 @@
             font-size: 0.8rem;
             letter-spacing: 0.05em;
         }
+
+        .compare {
+            max-width: 1000px;
+            margin: 60px auto 0 auto;
+            text-align: left;
+        }
+
+        .compare h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #f8fafc;
+        }
+
+        .compare p {
+            color: #94a3b8;
+            margin: 5px 0 20px 0;
+        }
+
+        .compare-grid {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr;
+            gap: 12px 16px;
+            align-items: center;
+        }
+
+        .compare-grid .col-label,
+        .compare-grid .row-label {
+            font-weight: 700;
+            color: #a5b4fc;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+        }
+
+        .compare-grid .row-label {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            text-align: center;
+        }
+
+        .compare-grid img {
+            width: 100%;
+            display: block;
+            border-radius: 6px;
+        }
     </style>
     <script>
         var params1 = [];
@@ -87,6 +132,24 @@
 
     <div class="viewer-label">Bottom: Preprocessed</div>
     <div class="papaya" data-params="params2"></div>
+
+    <div class="compare">
+        <h2>Comparing Two Brains</h2>
+        <p>Sagittal, coronal, and axial slices chosen to show the same part of each brain</p>
+        <div class="compare-grid">
+            <div></div>
+            <div class="col-label">Raw</div>
+            <div class="col-label">Preprocessed</div>
+
+            <div class="row-label">Subject 1</div>
+            <img src="images/sub1-raw.png" alt="Subject 1 raw T1w: sagittal, coronal, and axial slices">
+            <img src="images/sub1-preproc.png" alt="Subject 1 preprocessed T1w: sagittal, coronal, and axial slices">
+
+            <div class="row-label">Subject 2</div>
+            <img src="images/sub2-raw.png" alt="Subject 2 raw T1w: sagittal, coronal, and axial slices">
+            <img src="images/sub2-preproc.png" alt="Subject 2 preprocessed T1w: sagittal, coronal, and axial slices">
+        </div>
+    </div>
 </body>
 
 </html>
